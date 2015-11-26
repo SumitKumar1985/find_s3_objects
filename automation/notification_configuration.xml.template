@@ -1,0 +1,12 @@
+<NotificationConfiguration>
+	<QueueConfiguration>
+		<Id>100<Id>
+		<Queue>arn:aws:sqs:REGION:ACCOUNT:QUEUE-NAME</Queue>
+		<Event>s3:ObjectCreated:*</Event>
+	</QueueConfiguration>
+	<QueueConfiguration>
+		<Id>200<Id>
+		<Queue>arn:aws:sqs:REGION:ACCOUNT:QUEUE-NAME</Queue>
+		<Event>s3:ObjectRemoved:*</Event>
+	</QueueConfiguration>
+</NotificationConfiguration>

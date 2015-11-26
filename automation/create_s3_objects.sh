@@ -14,13 +14,15 @@ fi
 PROFILE="$1"
 DOMAIN_NAME="$2"
 
-while read bucket_name
+BUCKETS=$(ls -l ./data/ | grep '^d' | awk '{ print $NF }')
+
+for bucket_name in ${BUCKETS} 
 do
 	FQBN="${DOMAIN_NAME}.${bucket_name}"
 	aws --profile ${PROFILE} s3 mb s3://${FQBN}
 	aws --profile ${PROFILE} s3 cp --recursive ./data/${bucket_name}/* s3://${FQBN}
 	echo "Copied test data into ${FQBN}"
-done < buckets
+done
 
 while read bucket_name
 do
