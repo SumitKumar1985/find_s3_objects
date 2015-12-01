@@ -1,0 +1,19 @@
+{
+  "name": "bucket_events",
+  "version": "1.0.0",
+  "description": "Consume S3 bucket events and update an index with inforation on buckets and keys",
+  "main": "consume_s3_event.js",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha"
+  },
+  "keywords": [
+    "S3",
+    "bucket",
+    "events"
+  ],
+  "author": "Krishnan M",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.2.19"
+  }
+}
