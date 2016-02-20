@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/krishnan-mani/find_s3_objects#readme",
   "dependencies": {
+    "aws-sdk": "^2.2.19",
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
     "morgan": "^1.6.1"
